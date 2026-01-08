@@ -73,7 +73,6 @@ A physical FM antenna connected directly to the TEA5767 antenna pin.
 | RST | D3 |
 | LED | 3.3 V via 220 Ω resistor |
 
----
 
 ### TEA5767 FM Module
 
@@ -85,7 +84,6 @@ A physical FM antenna connected directly to the TEA5767 antenna pin.
 | SCL | A5 |
 | ANT | Physical antenna |
 
----
 
 ### Rotary Encoder
 
@@ -97,7 +95,7 @@ A physical FM antenna connected directly to the TEA5767 antenna pin.
 | VCC | 5 V |
 | GND | GND |
 
----
+
 
 ### PAM8403 Audio Amplifier
 
@@ -113,6 +111,8 @@ A physical FM antenna connected directly to the TEA5767 antenna pin.
 ## Pictures
 
 Version that incorporates perforated board and significantly more solder fumes is currently being made.
+
+---
 
 ## Wiring Diagram
 
