@@ -110,7 +110,10 @@ A physical FM antenna connected directly to the TEA5767 antenna pin.
 
 ## Pictures
 
-Version that incorporates perforated board and significantly more solder fumes is currently being made.
+![Figure 1](pictures/IMG_3601.jpg)
+**Figure 1** Breadboard prototype of FM Radio tuned to frequency 92.3 (KRRL). 
+
+**Version that incorporates perforated board and significantly more solder fumes is currently being made.**
 
 ---
 
