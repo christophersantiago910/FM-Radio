@@ -110,7 +110,7 @@ A physical FM antenna connected directly to the TEA5767 antenna pin.
 
 ---
 
-### Pictures
+## Pictures
 
 **Version that incorporates perforated board and significantly more solder fumes is currently being made.**
 
