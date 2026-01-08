@@ -1,21 +1,18 @@
-# Arduino FM Radio with Nokia 5110 LCD (Uno R3)
+# Arduino FM Radio
 
-This project implements a standalone FM radio using an Arduino Uno R3 as both the
-microcontroller and power source. The system features an external FM receiver,
-graphical LCD display, rotary encoder tuning, and amplified audio output.
+This project implements a standalone FM radio using an Arduino nano as the microcontroller. The system features an external FM receiver, LCD display, rotary encoder tuning, and amplified audio output.
 
-The Arduino Uno is powered via USB and supplies both 5 V and 3.3 V rails to the system.
+The entire system is powered by a MB102 power supply and a 9V battery. 
 
 ---
 
 ## Project Features
 
 - FM tuning via rotary encoder
-- Frequency display on Nokia 5110 (PCD8544) LCD
+- Frequency display on Nokia 5110 LCD
 - EEPROM storage of last tuned frequency
 - External physical FM antenna
 - Audio amplification via PAM8403 module
-- Clean separation of 5 V and 3.3 V power domains
 
 ---
 
@@ -23,25 +20,22 @@ The Arduino Uno is powered via USB and supplies both 5 V and 3.3 V rails to the 
 
 | Voltage | Devices Powered |
 |------|------------------|
-| 5 V | Arduino logic, TEA5767 FM module, rotary encoder, PAM8403 amplifier |
-| 3.3 V | Nokia 5110 LCD logic and backlight |
+| 5 V | Arduino Nano, TEA5767 FM module, rotary encoder, PAM8403 amplifier |
+| 3.3 V | Nokia 5110 LCD |
 | GND | Common reference for all modules |
-
-Important: The Nokia 5110 LCD must not be powered from 5 V.
 
 ---
 
 ## System Overview
 
-- **Arduino Uno R3**
-  - Runs the main firmware
-  - Supplies regulated 5 V and 3.3 V power
+- **Arduino Nano**
+  - Communicates with modules and manages program
 - **TEA5767 FM Radio Module**
   - Controlled via I²C
   - Outputs analog audio
 - **Nokia 5110 LCD**
-  - SPI-controlled graphical display
-  - Powered at 3.3 V only
+  - Shows FM radio station
+  - Powered at 3.3 V (every other component is powered at 5 V)
 - **Rotary Encoder**
   - User input for frequency adjustment
 - **PAM8403 Audio Amplifier**
@@ -51,24 +45,20 @@ Important: The Nokia 5110 LCD must not be powered from 5 V.
 
 ## LCD Configuration (Nokia 5110 / PCD8544)
 
-- Logic supply: 3.3 V
-- Backlight supply: 3.3 V through a 220 Ω resistor
-- SPI interface connected directly to the Arduino Uno
-- LCD reset is forced in software at startup to ensure reliable initialization
+- Power supply: 3.3 V
+- Backlight power supply: 3.3 V through a 220 Ω resistor
+- Interface is connected to the microcontroller
+- LCD reset once the system is rebooted up
 
 ---
 
 ## Antenna Configuration
 
-The project uses a physical FM antenna connected directly to the TEA5767 antenna pin.
-
-- Signal conductor connects to ANT
-- If the antenna includes a ground or shield, it is connected to system ground
-- No series components are used between the antenna and the radio module
+A physical FM antenna connected directly to the TEA5767 antenna pin.
 
 ---
 
-## Pin Mapping
+## Wiring
 
 ### Nokia 5110 LCD
 
