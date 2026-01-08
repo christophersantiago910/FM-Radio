@@ -108,6 +108,7 @@ A physical FM antenna connected directly to the TEA5767 antenna pin.
 | IN L / IN R | TEA5767 audio outputs |
 | OUT | Speaker |
 
+---
 
 ## Pictures
 
