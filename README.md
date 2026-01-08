@@ -114,6 +114,8 @@ A physical FM antenna connected directly to the TEA5767 antenna pin.
 
 The complete wiring diagram for this project is shown below.
 
+**Currently in the process of making this**
+
 ![Wiring Diagram](docs/wiring_diagram.png)
 
 ---
